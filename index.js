@@ -1,1 +1,1 @@
-console.log('hola chaparro test chaparro- Manrique');
+console.log('resolver conflicto');
