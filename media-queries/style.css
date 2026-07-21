@@ -1,0 +1,52 @@
+/* =========================================
+   ESTADO 1: CELULARES (Estilos Base por defecto)
+   Pantallas desde 0px hasta 600px
+========================================= */
+.contenedor-responsivo {
+  background-color: #ff4757; /* Rojo para alertar que es móvil */
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  transition: background-color 0.4s ease; /* Transición suave para la clase */
+}
+
+.caja-info {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 15px 30px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border-radius: 4px;
+}
+/* Forzamos el texto en móviles */
+.caja-info::after { content: " : Celular"; }
+
+
+/* =========================================
+   ESTADO 2: TABLETAS (Punto de ruptura a 600px)
+   Se activa cuando la pantalla mide 600px o más
+========================================= */
+@media (min-width: 600px) {
+  .contenedor-responsivo {
+    background-color: #1e90ff; /* Cambia a Azul */
+    height: 300px; /* Se hace un poco más alto */
+  }
+  
+  .caja-info::after { content: " : Tableta" !important; }
+}
+
+
+/* =========================================
+   ESTADO 3: COMPUTADORES (Punto de ruptura a 1024px)
+   Se activa cuando la pantalla mide 1024px o más
+========================================= */
+@media (min-width: 1024px) {
+  .contenedor-responsivo {
+    background-color: #2ed573; /* Cambia a Verde */
+    height: 400px; /* Altura completa de escritorio */
+  }
+  
+  .caja-info::after { content: " : Escritorio" !important; }
+}

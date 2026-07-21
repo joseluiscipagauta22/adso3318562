@@ -1,0 +1,49 @@
+/* =========================================
+   PARTE 1: LA MALLA BASE DE 4X4
+========================================= */
+.grid-contenedor {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 100px); 
+  gap: 10px;
+  background-color: #2f3542;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+/* Estilos visuales del hijo */
+.hijo-viajero {
+  background-color: #ff4757; /* Rojo */
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+
+/* =========================================
+   PARTE 2: COORDENADAS DIRECTAS (Súper legibles)
+========================================= */
+
+/* Escenario 1: Primera fila, primera columna */
+.pos-1 {
+  grid-row: 1 / 2;
+  grid-column: 1 / 2;
+}
+
+/* Escenario 2: Segunda fila, tercera columna */
+.pos-2 {
+  grid-row: 2 / 3;
+  grid-column: 3 / 4;
+}
+
+/* Escenario 3: Desde la segunda fila/columna hasta la tercera */
+.pos-3 {
+  grid-row: 2 / 4;    
+  grid-column: 2 / 4; 
+  background-color: #2ed573; /* Cambia a verde */
+}

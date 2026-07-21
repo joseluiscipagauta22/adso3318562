@@ -1,0 +1,85 @@
+/* =========================================
+   PARTE 1: ESTILOS BASE
+========================================= */
+.escenario {
+  background-color: #2f3542;
+  height: 300px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.caja {
+  width: 80px;
+  height: 80px;
+  background-color: #ff4757; /* Rojo */
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+
+/* =========================================
+   PARTE 2: LOS INTERRUPTORES (Clases CSS)
+========================================= */
+
+/* Llamamos a la animación de rebote */
+.anim-rebote {
+  /* nombre | duración | cómo avanza | repetición */
+  animation: mi-rebote 1.5s ease-in-out infinite;
+}
+
+/* Llamamos a la animación de giro completo */
+.anim-giro {
+  animation: mi-giro 2s linear infinite;
+}
+
+/* Llamamos a la animación de latido/alerta */
+.anim-alerta {
+  animation: mi-alerta 0.8s ease-in-out infinite;
+}
+
+
+/* =========================================
+   PARTE 3: LAS INSTRUCCIONES (@keyframes)
+========================================= */
+
+/* Animación 1: Rebote clásico usando porcentajes */
+@keyframes mi-rebote {
+  0%, 100% {
+    transform: translateY(0); /* Estado inicial y final en el suelo */
+  }
+  50% {
+    transform: translateY(-80px); /* En la mitad del tiempo sube 80px */
+  }
+}
+
+/* Animación 2: Giro de 360 grados */
+@keyframes mi-giro {
+  from {
+    transform: rotate(0deg);   /* Empieza sin rotar */
+  }
+  to {
+    transform: rotate(360deg); /* Termina dando una vuelta completa */
+  }
+}
+
+/* Animación 3: Alerta que cambia tamaño y color */
+@keyframes mi-alerta {
+  0% {
+    transform: scale(1);
+    background-color: #ff4757; /* Rojo original */
+  }
+  50% {
+    transform: scale(1.2);     /* Se agranda un 20% */
+    background-color: #ffa502; /* Cambia a naranja */
+  }
+  100% {
+    transform: scale(1);
+    background-color: #ff4757; /* Vuelve a su estado inicial */
+  }
+}

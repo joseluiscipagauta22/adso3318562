@@ -1,0 +1,98 @@
+/* =========================================
+   PARTE 1: ESTILOS BASE (No enseñes esto aún)
+   Solo es para que las cajas se vean bien.
+========================================= */
+.contenedor {
+    background-color: #f4f4f9;
+    height: 400px;
+    /* Altura fija para notar el centrado vertical */
+    border: 3px dashed #ccc;
+    border-radius: 8px;
+    /* Activamos Flexbox en el contenedor base */
+    display: flex;
+}
+
+.caja {
+    width: 100px;
+    height: 100px;
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+
+    /* Usamos Flexbox adentro de la caja solo para centrar el número */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Colores para distinguir a los hijos */
+.caja-1 {
+    background-color: #ff4757;
+}
+
+/* Rojo */
+.caja-2 {
+    background-color: #2ed573;
+}
+
+/* Verde */
+.caja-3 {
+    background-color: #1e90ff;
+}
+
+/* Azul */
+
+
+/* =========================================
+   PARTE 2: LOS ESCENARIOS PARA LA CLASE
+   Intercambia estas clases en el HTML
+========================================= */
+
+/* Escenario 1: El comportamiento por defecto */
+/* Todo se pega arriba y a la izquierda en fila */
+.ejemplo-1 {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+/* Escenario 2: El Centrado Perfecto */
+/* Ideal para centrar un login o un mensaje importante en pantalla */
+.ejemplo-2 {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Escenario 3: La Barra de Navegación */
+/* Empuja los elementos a los extremos */
+.ejemplo-3 {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Escenario 4: Repartir el espacio igualitario */
+/* Crea márgenes automáticos y perfectos entre las cajas */
+.ejemplo-4 {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* Escenario 5: Cambiar a Columna (Diseño Móvil) */
+/* Los elementos ahora se apilan hacia abajo */
+.ejemplo-5 {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/* Escenario 6: Columna con Separación (Gap) */
+/* La forma moderna de dar espacio sin usar margins */
+.ejemplo-6 {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
